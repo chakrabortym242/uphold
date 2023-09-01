@@ -6,6 +6,14 @@ import cv2
 import keras
 import numpy as np
 
+from android.permissions import request_permissions, Permission
+
+request_permissions([
+    Permission.CAMERA,
+    Permission.WRITE_EXTERNAL_STORAGE,
+    Permission.READ_EXTERNAL_STORAGE
+])
+
 Builder.load_string('''
 <CameraClick>:
     orientation: 'vertical'
